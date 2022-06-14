@@ -13,9 +13,11 @@ CREATE TABLE tblUser(
 	address nvarchar(200) ,
 	birthday date ,
 	phoneNumber varchar(10),
-	username varchar(50) NOT NULL,
+	username varchar(50) NOT NULL UNIQUE,
 	PRIMARY KEY(userID)
 );
+
+
 
 ALTER TABLE tblUser
 ADD CONSTRAINT FK_USER_ACCOUNT FOREIGN KEY(username)
